@@ -31,7 +31,16 @@ var sd = {
   dropDownResults: new Array()
 };
 
-var popupElements = new Array();
+var menuElements = new Array();
+
+for(var i = 0; i < dialogBuilder.menus.length; ++i) {
+  menuElements[i] = 
+  {
+    type: "cluster",
+    name: dialogBuilder.menus[i].name,
+    elements: new Array()
+  };
+}
 
 for(var i = 0; i < dialogBuilder.dropDowns.length; ++i) {
   var view = new Object();  
@@ -54,19 +63,13 @@ for(var i = 0; i < dialogBuilder.dropDowns.length; ++i) {
   e.width = 150;
 
   view.elements[0] = s;
-  view.elements[1] = e;  
-
-  popupElements[i] = view;
+  view.elements[1] = e;
+  
+  for(var j = 0; j < menuElements.length; ++j) {
+    var menu = menuElements[j];
+    if(t.menu == menu.name) menuElements[j].elements.push(view);
+  }
 }
-
-var popupCluster =
-{
-  type: "cluster",
-  name: "Ore",
-  elements: popupElements
-};
-
-var optionsElements = new Array(); 
 
 for (var i = 0; i < dialogBuilder.textBoxes.length; ++i)
 {
@@ -91,15 +94,11 @@ for (var i = 0; i < dialogBuilder.textBoxes.length; ++i)
   view.elements[0] = s;
   view.elements[1] = e;  
 
-  optionsElements[i] = view;
+  for(var j = 0; j < menuElements.length; ++j) {
+    var menu = menuElements[j];
+    if(t.menu == menu.name) menuElements[j].elements.push(view);
+  }
 }
-
-var optionsCluster = 
-{
-  type: "cluster",
-  name: "Project",
-  elements: optionsElements
-};
 
 sd.initialize = function(dialog)
 {
@@ -157,11 +156,7 @@ sd.description =
    {
     type: "view",
     align_children: "align_fill",
-    elements:
-    [
-     optionsCluster,
-     popupCluster
-    ]
+    elements: menuElements
    },
    {
     type: "ok"
