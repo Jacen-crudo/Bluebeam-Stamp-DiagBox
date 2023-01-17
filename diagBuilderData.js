@@ -67,16 +67,6 @@ var builder =
                     "Gordon Lundell": -1,
                     "Shane Larson": -1
                 }
-            },
-            {
-                field: "Text5",
-                description: "Text 5:",
-                menu: "menu_2",
-                values:
-                {
-                    "Change Me": -1,
-                    "Pick Me": -1
-                }
             }
         ]
 
