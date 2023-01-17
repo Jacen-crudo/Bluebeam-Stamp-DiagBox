@@ -9,15 +9,15 @@ var builder =
 
     menus:
     [
-        {name: "Project"},
-        {name: "Ore"}
+        {id: "menu_1", name: "Project"},
+        {id: "menu_2", name: "Ore"}
     ],
 
     // These map to Text Fields in the Stamp
     /**
      * field: "Field Name Directly to text field name in Bluebeam"
      * description: "Dialog label"
-     * menu: Menu Mapped to the above labeled menus
+     * menu: Menu Mapped to the above labeled menu ID
      * default: function to return the default value
      */
 
@@ -25,8 +25,8 @@ var builder =
 
         [
 
-            { field: "Project", description: "Project:", menu: "Project", default: function () { return "";}},
-            { field: "PlanRelease", description: "Plan release:", menu: "Project", default: function () { return "";}}
+            { field: "Project", description: "Project:", menu: "menu_1", default: function () { return "";}},
+            { field: "PlanRelease", description: "Plan release:", menu: "menu_1", default: function () { return "";}}
 
         ],        
 
@@ -34,7 +34,7 @@ var builder =
     /**
      * field: "Field Name Directly to text field name in Bluebeam"
      * description: "Dialog label"
-     * menu: Menu Mapped to the above labeled menus
+     * menu: Menu Mapped to the above labeled menu ID
      * values: Object of values with Value and -1
      */
 
@@ -44,7 +44,7 @@ var builder =
             {
                 field: "Estimator",
                 description: "Estimator:",
-                menu: "Ore",
+                menu: "menu_2",
                 values:
                 {
                     "Matt Israel": -1,
@@ -56,7 +56,7 @@ var builder =
             {
                 field: "SalesRep",
                 description: "Sales Rep:",
-                menu: "Ore",
+                menu: "menu_2",
                 values:
                 {
                     "Matt Ramsaur": -1,

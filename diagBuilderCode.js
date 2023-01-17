@@ -67,7 +67,7 @@ for(var i = 0; i < dialogBuilder.dropDowns.length; ++i) {
   
   for(var j = 0; j < menuElements.length; ++j) {
     var menu = menuElements[j];
-    if(t.menu == menu.name) menuElements[j].elements.push(view);
+    if(t.menu == menu.id) menuElements[j].elements.push(view);
   }
 }
 
@@ -96,7 +96,7 @@ for (var i = 0; i < dialogBuilder.textBoxes.length; ++i)
 
   for(var j = 0; j < menuElements.length; ++j) {
     var menu = menuElements[j];
-    if(t.menu == menu.name) menuElements[j].elements.push(view);
+    if(t.menu == menu.id) menuElements[j].elements.push(view);
   }
 }
 
