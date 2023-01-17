@@ -37,6 +37,7 @@ for(var i = 0; i < dialogBuilder.menus.length; ++i) {
   menuElements[i] = 
   {
     type: "cluster",
+    id: dialogBuilder.menus[i].id,
     name: dialogBuilder.menus[i].name,
     elements: new Array()
   };
