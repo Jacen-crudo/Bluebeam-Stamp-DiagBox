@@ -1,5 +1,4 @@
-# Bluebeam-Stamp-DiagBox
-## Bluebeam Interactive Stamp Dialog
+## Bluebeam Interactive Stamp Dialog Box
 
 ## FEATURES
 - Add user entry on stamp creation to populate text on a stamp
