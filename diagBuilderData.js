@@ -2,24 +2,30 @@ var builder =
 
 {
 
-    // These create menus within the Dialog Menu
-    /**
-     * name: "Title of the Menu"
-     */
+    /** MENUS PROPERTY textBoxes
+     * TYPE: Obj Arr[]
+     * 
+     * Properties:
+	 * “id” (STRING): ID of the Menu to be referenced by input fields.
+     * “name” (STRING): Display name of the Menu
+    */
 
     menus:
     [
         {id: "menu_1", name: "Project"},
-        {id: "menu_2", name: "Ore"}
+        {id: "menu_2", name: "Rep"}
     ],
 
-    // These map to Text Fields in the Stamp
-    /**
-     * field: "Field Name Directly to text field name in Bluebeam"
-     * description: "Dialog label"
-     * menu: Menu Mapped to the above labeled menu ID
-     * default: function to return the default value
-     */
+    /** TEXT BOXES PROPERTY textBoxes
+     * TYPE: Obj Arr[]
+     * 
+     * Properties:
+	 * “field” (STRING): Field name referencing the Bluebeam Text Field Name
+	 * “description” (STRING): Display name in the Dialog Window
+	 * “menu” (STRING): ID of the Menu labeled above
+	 * “default” (FUNCTION): Function to return the default value
+    */
+
 
     textBoxes:
 
@@ -30,12 +36,14 @@ var builder =
 
         ],        
 
-    // These create Drop Down Fields in the Stamp
-    /**
-     * field: "Field Name Directly to text field name in Bluebeam"
-     * description: "Dialog label"
-     * menu: Menu Mapped to the above labeled menu ID
-     * values: Object of values with Value and -1
+    /** DROP DOWN PROPERTY textBoxes
+     * TYPE: Obj Arr[]
+     * 
+     * Properties:
+	 * “field” (STRING): Field name referencing the Bluebeam Text Field Name
+	 * “description” (STRING): Display name in the Dialog Window
+	 * “menu” (STRING): ID of the Menu labeled above
+	 * “values” (OBJECT): Values as text to be displayed on the stamp with ‘:-1’ following
      */
 
     dropDowns:
@@ -47,10 +55,10 @@ var builder =
                 menu: "menu_2",
                 values:
                 {
-                    "Matt Israel": -1,
-                    "Parker Fowler": -1,
-                    "Josh Johnson": -1,
-                    "Danniel Herring": -1
+                    "Matt": -1,
+                    "Parker": -1,
+                    "Josh": -1,
+                    "Danniel": -1
                 }
             },
             {
@@ -59,13 +67,13 @@ var builder =
                 menu: "menu_2",
                 values:
                 {
-                    "Matt Ramsaur": -1,
-                    "Olivia Hicks": -1,
-                    "Geoff Conner": -1,
-                    "Clint Watson": -1,
-                    "Matt Israel": -1,
-                    "Gordon Lundell": -1,
-                    "Shane Larson": -1
+                    "Matt": -1,
+                    "Olivia": -1,
+                    "Geoff": -1,
+                    "Clint": -1,
+                    "Matt": -1,
+                    "Gordon": -1,
+                    "Shane": -1
                 }
             }
         ]

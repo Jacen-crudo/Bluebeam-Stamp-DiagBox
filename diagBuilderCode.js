@@ -1,8 +1,6 @@
 // WARNING: DO NOT EDIT
 // SEE GLOBAL JAVASCRIPT SECTION FOR CUSTOMIZATION
 
- 
-
 if (event.source.forReal)
 {
 var stampDialog = CreateDialog(builder);
